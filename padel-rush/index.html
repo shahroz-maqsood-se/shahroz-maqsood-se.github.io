@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padel Rush</title>
+<meta name="description" content="Padel Rush, an arcade padel game for Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --night: #070b14; --text: #e6e9f2; --muted: #9aa3b8; --volt: #d6ef3d; --inferno: #ff6a2e; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--night); color: var(--text); }
+  body {
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(55% 45% at 50% 35%, rgba(214,239,61,0.16), rgba(255,106,46,0.06) 55%, transparent 80%), var(--night);
+    display: grid; place-items: center; min-height: 100vh; padding: 32px 16px;
+  }
+  main { text-align: center; max-width: 520px; }
+  .kicker { font-family: "Saira Condensed", system-ui, sans-serif; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--inferno); font-size: 14px; margin: 0 0 8px; }
+  h1 { font-family: "Saira Condensed", system-ui, sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(56px, 16vw, 104px); line-height: 0.95; margin: 0; color: #fff; }
+  h1 span { color: var(--volt); }
+  p { color: var(--muted); margin: 18px 0 28px; }
+  a.btn {
+    display: inline-block; padding: 12px 22px; border: 2px solid var(--volt); border-radius: 999px; color: var(--volt);
+    text-decoration: none; font-family: "Saira Condensed", system-ui, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 18px;
+  }
+  a.btn:hover { background: var(--volt); color: var(--night); }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Arcade padel for Android</p>
+  <h1>Padel <span>Rush</span></h1>
+  <p>A fast padel game by an independent developer.</p>
+  <a class="btn" href="privacy.html">Privacy Policy</a>
+</main>
+</body>
+</html>
