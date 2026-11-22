@@ -58,7 +58,7 @@
     <p class="updated">Last updated: 22 November 2026</p>
   </header>
 
-  <p>Padel Rush is a mobile game made by an independent developer. This page explains what information the game handles, why, and what happens to it. The short version: you can play as a guest with your progress kept on your device, or sign in with Google or an email address to keep it in the cloud and appear on the rankings. The game uses a handful of Unity and Google services to run accounts, online matches, ads and purchases, and does not sell your data.</p>
+  <p>Padel Rush is a mobile game made by an independent developer. This page explains what information the game handles, why, and what happens to it. The short version: you can play as a guest, with your progress kept on your device and your Aces wallet on our game server under an anonymous ID, or sign in with Google or an email address to keep your progress in the cloud and appear on the rankings. The game uses a handful of Unity and Google services to run accounts, online matches, ads and purchases, and does not sell your data.</p>
 
   <h2 id="collect">What we collect</h2>
   <p>You can play without an account. If you sign in, the game receives your <strong>email address</strong> (from Google or the email you type) to identify your account. You also choose a <strong>display name</strong> and a <strong>country</strong>, which are shown to other players in online matches and on the rankings.</p>
@@ -74,7 +74,7 @@
   </ul>
 
   <h2>Where your progress lives</h2>
-  <div class="card"><p>As a guest, your progress is stored <strong>only on your device</strong>, and uninstalling the game removes it. When you sign in, a copy is kept in <strong>Google Cloud Firestore</strong> so you can continue on another phone; your display name, country, rating, weekly points and level are shown on the public rankings.</p></div>
+  <div class="card"><p>As a guest, your progress is stored <strong>on your device</strong>, and uninstalling the game removes it; your Aces wallet, owned items and ranked results are kept on our game server under an anonymous player ID, so purchases are never lost. When you sign in, a copy is kept in <strong>Google Cloud Firestore</strong> so you can continue on another phone; your display name, country, rating, weekly points and level are shown on the public rankings.</p></div>
 
   <h2>Services the game uses</h2>
   <p><strong>Unity Gaming Services</strong> (Authentication, Lobby, Relay) — used only for online matches. Authentication gives you an anonymous player ID; Lobby finds an opponent; Relay carries match traffic between the two players. Unity's handling of this data is described in the <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Privacy Policy</a>.</p>
@@ -98,11 +98,29 @@
 
   <h2>Your choices</h2>
   <ul>
-    <li>Play offline: the single-player modes need no network and send nothing to the online services.</li>
+    <li>Play offline: the single-player modes work without a network. When the phone is online, the game still sends usage statistics and crash reports and syncs your wallet.</li>
     <li>Change or clear your display name at any time in the game's settings.</li>
     <li>Reset your advertising ID or opt out of ad personalisation in your device settings; in the EEA, the UK and Switzerland, change your ad consent in the game under Settings → Privacy choices.</li>
     <li>Uninstall the game to remove all locally stored progress.</li>
-    <li><strong>Delete your account</strong> in the game: Profile → Delete account removes your account, cloud save, rankings entry, friends and your Aces wallet (Aces and owned items) straight away. Records of past purchases (product, purchase token, time) and of ranked matches are kept without your name, so a purchase cannot be claimed twice, refunds can be handled and cheating reports stay valid. You can also ask for deletion by emailing the address below from the email on your account; it is done within 30 days.</li>
+  </ul>
+
+  <h2 id="delete-account">Delete your account and data</h2>
+  <ul>
+    <li><strong>In the game:</strong> Profile → Delete account removes your account, cloud save, rankings entry, friends and your Aces wallet (Aces and owned items) straight away.</li>
+    <li><strong>By email:</strong> write to the address below from the email on your account, or, as a guest, include the player code shown on your Profile. We delete the account and its data within 30 days.</li>
+    <li><strong>What is kept:</strong> records of past purchases (product, purchase token, time) and of ranked matches are kept without your name, so a purchase cannot be claimed twice, refunds can be handled and cheating reports stay valid.</li>
+  </ul>
+
+  <h2>Player names and reports</h2>
+  <p>Display names are public and must not be offensive, hateful, sexual or pose as staff. Any player can report a name from the rankings or after an online match; the report (your player ID, the reported player's ID and name, and when) is stored for review, and blocking hides that player's name on your phone. Names that break the rules are reset, and repeat offenders lose online play.</p>
+
+  <h2>Keeping data safe and how long we keep it</h2>
+  <ul>
+    <li>Everything the game sends travels encrypted (HTTPS/TLS). Firestore security rules let each player read and write only their own data; wallets and purchase records can be changed only by our game server.</li>
+    <li>Account, progress and wallet data: kept until you delete your account.</li>
+    <li>Name reports: kept until reviewed, then deleted.</li>
+    <li>Purchase and ranked match records: kept to handle refunds, chargebacks and cheating, without your name.</li>
+    <li>Usage statistics and crash reports: kept by Google under Firebase's retention settings, then deleted automatically.</li>
   </ul>
 
   <h2>Changes to this policy</h2>
