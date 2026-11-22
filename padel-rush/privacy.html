@@ -55,32 +55,39 @@
   <header>
     <p class="kicker">Padel Rush</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 4 November 2026</p>
+    <p class="updated">Last updated: 22 November 2026</p>
   </header>
 
-  <p>Padel Rush is a mobile game made by an independent developer. This page explains what information the game handles, why, and what happens to it. The short version: the game keeps your progress on your device, uses a handful of Unity and Google services to run online matches, ads and purchases, and does not sell your data.</p>
+  <p>Padel Rush is a mobile game made by an independent developer. This page explains what information the game handles, why, and what happens to it. The short version: you can play as a guest with your progress kept on your device, or sign in with Google or an email address to keep it in the cloud and appear on the rankings. The game uses a handful of Unity and Google services to run accounts, online matches, ads and purchases, and does not sell your data.</p>
 
-  <h2>What we collect</h2>
-  <p>Padel Rush does not ask for an account, an email address or your real name. The only thing you choose to give the game is a <strong>display name</strong>, which is shown to other players in online matches.</p>
+  <h2 id="collect">What we collect</h2>
+  <p>You can play without an account. If you sign in, the game receives your <strong>email address</strong> (from Google or the email you type) to identify your account. You also choose a <strong>display name</strong> and a <strong>country</strong>, which are shown to other players in online matches and on the rankings.</p>
   <p>Depending on the features you use, the services below receive some technical data from the app:</p>
   <ul>
-    <li><strong>Anonymous player ID</strong> — a random identifier created by Unity Authentication so that online matches work. It is not linked to an email, phone number or name.</li>
+    <li><strong>Player IDs</strong> — random identifiers created by Firebase Authentication (your guest or signed-in account) and by Unity Authentication (for online matches).</li>
+    <li><strong>Game progress and rankings</strong> — if you sign in: your progress save, rating, weekly points, level, display name, country, friend code and friends list, stored in Google Cloud Firestore.</li>
+    <li><strong>Usage and crash data</strong> — which screens and modes are used, match results, and crash reports, collected by Firebase Analytics and Firebase Crashlytics to improve the game.</li>
     <li><strong>Advertising ID</strong> — the Android advertising identifier, used by Google AdMob to serve and measure ads.</li>
-    <li><strong>Purchase records</strong> — handled by Google Play Billing. The game receives confirmation that a purchase succeeded, not your payment details.</li>
+    <li><strong>Purchase records</strong> — handled by Google Play Billing. The game receives confirmation that a purchase succeeded, not your payment details. Our game server checks each purchase with Google and keeps a record of it (product, purchase token, time) together with your Aces balance and the items you own.</li>
+    <li><strong>Ranked results</strong> — for ranked matches, the game server records the match (players' IDs, result, time) to update ratings and to spot cheating; accounts with repeated cheating reports can be locked out of ranked play for a while.</li>
     <li><strong>Device and connection data</strong> — things like device model, OS version, IP address and app version, which the services below process to operate.</li>
   </ul>
 
   <h2>Where your progress lives</h2>
-  <div class="card"><p>Your match history, unlocked gear, settings and ranking progress are stored <strong>locally on your device</strong>. Uninstalling the game removes them. We do not keep a copy on our own servers.</p></div>
+  <div class="card"><p>As a guest, your progress is stored <strong>only on your device</strong>, and uninstalling the game removes it. When you sign in, a copy is kept in <strong>Google Cloud Firestore</strong> so you can continue on another phone; your display name, country, rating, weekly points and level are shown on the public rankings.</p></div>
 
   <h2>Services the game uses</h2>
   <p><strong>Unity Gaming Services</strong> (Authentication, Lobby, Relay) — used only for online matches. Authentication gives you an anonymous player ID; Lobby finds an opponent; Relay carries match traffic between the two players. Unity's handling of this data is described in the <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Privacy Policy</a>.</p>
+  <p><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Analytics, Crashlytics, Remote Config) — signs you in, stores your account's progress and the rankings, measures how the game is used and reports crashes. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>.</p>
   <p><strong>Google AdMob</strong> — shows advertisements in the game and uses the advertising ID, and approximate location derived from your IP address, to do so. In the EEA, the UK and Switzerland the game asks for your consent through Google's consent message before personalised ads are shown, and Settings → Privacy choices lets you change it. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+  <p><strong>Padel Rush game server</strong> (runs on Cloudflare Workers, stores in Google Cloud Firestore) — holds your Aces, owned items and Pro Pass, checks purchases with Google Play, and records ranked results and ratings so they cannot be edited on the phone. It receives your player ID and the requests the game makes, plus your IP address as part of the connection. See the <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a>.</p>
   <p><strong>Google Play Billing</strong> — processes in-app purchases. Payment information goes to Google, not to us. See the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
 
   <h2>How we use it</h2>
   <ul>
     <li>To run online matches and show your display name to your opponent.</li>
+    <li>To keep your account's progress and show you, your friends and other players on the rankings.</li>
+    <li>To understand which parts of the game are played and to fix crashes.</li>
     <li>To serve ads and process purchases that fund the game.</li>
     <li>To keep the game working and fix problems.</li>
   </ul>
@@ -95,6 +102,7 @@
     <li>Change or clear your display name at any time in the game's settings.</li>
     <li>Reset your advertising ID or opt out of ad personalisation in your device settings; in the EEA, the UK and Switzerland, change your ad consent in the game under Settings → Privacy choices.</li>
     <li>Uninstall the game to remove all locally stored progress.</li>
+    <li><strong>Delete your account</strong> in the game: Profile → Delete account removes your account, cloud save, rankings entry, friends and your Aces wallet (Aces and owned items) straight away. Records of past purchases (product, purchase token, time) and of ranked matches are kept without your name, so a purchase cannot be claimed twice, refunds can be handled and cheating reports stay valid. You can also ask for deletion by emailing the address below from the email on your account; it is done within 30 days.</li>
   </ul>
 
   <h2>Changes to this policy</h2>
